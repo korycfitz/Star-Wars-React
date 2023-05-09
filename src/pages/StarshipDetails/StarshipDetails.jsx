@@ -15,7 +15,7 @@ const StarshipDetails = () => {
     fetchDetails()
   }, [starshipId])
 
-  if (!starshipDetails.name) return <h1>Loading...</h1>
+  if (!starshipDetails.length) return <h1>Loading...</h1>
 
   return (
     <main className="starship-details">
@@ -33,4 +33,4 @@ const StarshipDetails = () => {
   )
 }
 
-export default StarshipDetails
+export default StarshipDetails;

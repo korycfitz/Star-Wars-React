@@ -13,7 +13,7 @@ const StarshipList = () => {
     fetchStarshipList()
   }, [])
 
-  if (!starshipList.length) return <h1>Loading...</h1>
+  if (!starshipList.name) return <h1>Loading...</h1>
 
   return (
     <main className="starship-list">
@@ -21,7 +21,6 @@ const StarshipList = () => {
       {starshipList.map((starship, idx) => (
         <div 
         key={idx} 
-        className="link-container"
         >
           <Link 
           // to={`/starships/${starship._id}`}>{starship.name}
@@ -35,4 +34,4 @@ const StarshipList = () => {
   )
 }
 
-export default StarshipList
+export default StarshipList;
