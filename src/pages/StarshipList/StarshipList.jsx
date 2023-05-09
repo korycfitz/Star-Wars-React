@@ -13,17 +13,23 @@ const StarshipList = () => {
     fetchStarshipList()
   }, [])
 
-  if (!starshipList.length) return <h1>Loading all Starships...</h1>
+  if (!starshipList.length) return <h1>Loading...</h1>
 
   return (
     <main className="starship-list">
       <h1>Starship List</h1>
       {starshipList.map((starship, idx) => (
-        <Link 
-        to={`/starships/${starship.url.match(/\d+/g)}`} 
-        key={idx}
-        >{starship.name}
-        </Link>
+        <div 
+        key={idx} 
+        className="link-container"
+        >
+          <Link 
+          // to={`/starships/${starship._id}`}>{starship.name}
+          to={`/starships/${starship.url.match(/\d+/g)}`}
+          >
+            {starship.name}
+          </Link>
+        </div>
       ))}
     </main> 
   )

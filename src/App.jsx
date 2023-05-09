@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import NavBar from './components/NavBar'
 import StarshipList from './pages/StarshipList/StarshipList'
+import StarshipDetails from './pages/StarshipDetails/StarshipDetails'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/starships' element={<StarshipList />}/>
-        {/* <Route path='/starships/:starshipId' element={<StarshipDetails />}/> */}
+        <Route path='/starships/:starshipId' element={<StarshipDetails />}/>
       </Routes>
     </>
   )
